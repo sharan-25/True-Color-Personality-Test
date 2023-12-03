@@ -1,0 +1,60 @@
+ /* Add some styles for the typewriter effect */
+ #typewriter-container {
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+#typewriter {
+    font-size: 1.2em; 
+}
+
+#arrow-container {
+    display: none;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#arrow {
+    font-size: 30px;
+    color: #fff;
+    position: relative;
+    animation: moveArrow 2s ease-in-out infinite;
+}
+
+#arrow::before {
+    content: "→";
+    position: absolute;
+    top: -8px;
+    left: -15px;
+}
+
+#nextButton {
+    display: none;
+    margin-top: 20px;
+    font-size: 20px;
+    padding: 15px 30px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@keyframes moveArrow {
+    0%, 100% {
+        transform: translateY(78px)  translateX(370px);
+    }
+    25% {
+      transform: translateY(68px)  translateX(375px);
+        
+    }
+    50% {
+      transform: translateY(78px)  translateX(380px);
+        
+    }
+    75% {
+      transform: translateY(88px)  translateX(375px);
+       
+    }
+}

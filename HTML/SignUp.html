@@ -1,0 +1,112 @@
+<!-- signup.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Adding CSS files -->
+    <link rel="stylesheet" href="../CSS/style.css" />
+    <link rel="stylesheet" href="../CSS/SignUp.css" />
+    <link rel="stylesheet" href="../CSS/Header-Footer.css" />
+    
+    <!-- Adding jQuery -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.4.min.js"
+      integrity="sha256-oP6HI/tZ1iIepiI5aYfL5cH3PFfHqU6qD1niQXz0Kx4="
+      crossorigin="anonymous"
+    ></script>
+
+    <title>Sign Up</title>
+  </head>
+  <body>
+    <!-- Background Video -->
+    <video autoplay muted loop id="background-video">
+      <source src="../Images/VIDEO1.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <!-- header -->
+    <header>
+      <nav class="navbar">
+        <div class="logo">
+          <img src="../Images/logo.jpg" height="35px" width="35px" alt="Logo" />
+          <!-- <a href="#">Logo</a> -->
+        </div>
+        <div class="menu">
+          <button class="menu-button" onclick="toggleMenu()">Menu</button>
+          <ul class="dropdown-menu" id="menu">
+            <a href="home.html">Home</a>
+            <a href="about me .html">About</a>
+            <a href="Contactus.html">Contact</a>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <!-- start--form -->
+    <div class="container">
+      <form id="signupForm" onsubmit="validateSignup()">
+        <h2>Sign Up</h2>
+        <!-- Name -->
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+        <!-- Email -->
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+        <!-- Password -->
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required />
+        </div>
+        <!-- Confirm Password -->
+        <div class="form-group">
+          <label for="confirmPassword">Confirm Password:</label>
+          <input
+            type="password"
+            id="confirmPassword"
+            name="confirmPassword"
+            required
+          />
+        </div>
+        <br /><br />
+        <!-- Signup button -->
+        <button type="submit">Sign Up</button>
+        <!-- Login page link-->
+        <div class="Login">
+          <p>Already have an account? <a href="Index.html">Login</a></p>
+        </div>
+
+        <!-- container to display error message -->
+        <div id="errorBox"></div>
+      </form>
+    </div>
+
+    <!-- End--form -->
+
+    <!-- footer -->
+    <footer>
+      <p>&copy; Harsharan Manpreet Aryan Vineeth</p>
+    </footer>
+
+    <script>
+      function toggleMenu() {
+        var menu = document.getElementById("menu");
+        menu.style.display = menu.style.display === "block" ? "none" : "block";
+      }
+
+      // Close the menu if the user clicks outside of it
+      window.onclick = function (event) {
+        if (!event.target.matches(".menu-button")) {
+          var menu = document.getElementById("menu");
+          if (menu.style.display === "block") {
+            menu.style.display = "none";
+          }
+        }
+      };
+    </script>
+    <!-- External JS file -->
+    <script src="../JS/SignUp.js"></script>
+  </body>
+</html>
