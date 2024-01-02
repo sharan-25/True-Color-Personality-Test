@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Information</title>
+    <!-- External CSS files -->
+    <link rel="stylesheet" href="../CSS/style.css" />
+    <link rel="stylesheet" href="../CSS/Header-Footer.css" />
+    <link rel="stylesheet" href="../CSS/Contact.css"/>
+  </head>
+  <body>
+    <video autoplay muted loop>
+      <source src="../Images/VIDEO1.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+
+    <!-- header -->
+    <header>
+      <nav class="menu-container">
+        <div class="logo">
+          <img src="../Images/logo.jpg" height="35px" width="35px" alt="Logo" />
+          <!-- <a href="#">Logo</a> -->
+        </div>
+        <div class="menu">
+          <button class="menu-button" onclick="toggleMenu()">Menu</button>
+          <ul class="dropdown-menu" id="menu">
+            <a href="home.html">Home</a>
+            <a href="about me .html">About</a>
+            <a href="Contactus.html">Contact</a>
+            <a href="#" onclick="logout()">Logout</a>
+            <a href="Index.html">Login</a>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <!-- content -->
+    <div class="contact-container">
+      <div class="contact">
+        <h2>Aryan</h2>
+        <label>Email:</label>
+        <p class="email">aryan21@example.com</p>
+      </div>
+
+      <div class="contact">
+        <h2>Harsharan</h2>
+        <label>Email:</label>
+        <p class="email">harsharan24@example.com</p>
+      </div>
+
+      <div class="contact">
+        <h2>Vineeth</h2>
+        <label>Email:</label>
+        <p class="email">vineeth25@example.com</p>
+      </div>
+
+      <div class="contact">
+        <h2>Manpreet</h2>
+        <label>Email:</label>
+        <p class="email">manpreet20@example.com</p>
+      </div>
+    </div>
+    <!-- footer -->
+    <footer>
+      <p>&copy; Harsharan Manpreet Aryan Vineeth</p>
+    </footer>
+    <!-- script -->
+    <script>
+      function toggleMenu() {
+        var menu = document.getElementById("menu");
+        menu.style.display = menu.style.display === "block" ? "none" : "block";
+      }
+
+      // Close the menu if the user clicks outside of it
+      window.onclick = function (event) {
+        if (!event.target.matches(".menu-button")) {
+          var menu = document.getElementById("menu");
+          if (menu.style.display === "block") {
+            menu.style.display = "none";
+          }
+        }
+      };
+      //logout button event
+      function logout() {
+        // Clear session storage
+        sessionStorage.clear();
+
+        // Clear local storage
+        localStorage.clear();
+
+        // Redirect to the login page or perform other logout actions
+        window.location.href = "Index.html";
+        alert("Press OK to Logout!");
+      }
+    </script>
+  </body>
+</html>

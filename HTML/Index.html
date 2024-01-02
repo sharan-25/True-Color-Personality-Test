@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta charset="X-UA_Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width , initial-scale=1.0" />
+    <title>LOGIN</title>
+    <!-- Adding CSS files -->
+    <link rel="stylesheet" href="../CSS/style.css" />
+    <link rel="stylesheet" href="../CSS/Header-Footer.css" />
+
+    <!-- Adding javascript file -->
+    <script defer src="../JS/script.js"></script>
+    <!-- Adding icon link -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <!-- body  -->
+  <body>
+    <video autoplay muted loop id="background-video">
+      <source src="../Images/VIDEO1.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <!-- header -->
+    <header>
+      <nav class="menu-container">
+        <div class="logo">
+          <img src="../Images/logo.jpg" height="35px" width="35px" alt="Logo" />
+          <!-- <a href="#">Logo</a> -->
+        </div>
+        <div class="menu">
+          <button class="menu-button" onclick="toggleMenu()">Menu</button>
+          <ul class="dropdown-menu" id="menu">
+            <a href="home.html">Home</a>
+            <a href="about me .html">About</a>
+            <a href="Contactus.html">Contact</a>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <!-- start Form -->
+    <div class="wrapper">
+      <form id="form" actions="/" name="myForm" method="GET">
+        <h1>LOGIN</h1>
+        <!-- Start Username code -->
+        <div class="input-box">
+          <input
+            type="text"
+            placeholder="Username"
+            id="name"
+            name="myName"
+            required
+          />
+          <i class="bx bxs-user"></i>
+        </div>
+        <!-- End Username -->
+
+        <!-- Start Password -->
+        <div class="input-box">
+          <input
+            type="password"
+            placeholder="Password"
+            id="password"
+            name="myPassword"
+            required
+          />
+          <i class="bx bx-lock"></i>
+        </div>
+        <!-- End Password -->
+
+        <!-- Start Remember-me & Forgot password-->
+        <div class="remember-forget">
+          <label><input type="checkbox" /> Remember me </label>
+          <a href="ForgetPassword.html">Forgot password?</a>
+        </div>
+        <!-- End Remember-me & Forgot password-->
+        <!-- generate password button -->
+        <button type="button" onclick="generatePassword()" class="btn">
+          Generate Password</button
+        ><br /><br />
+        <!-- end generate password -->
+
+        <!-- start submit button -->
+        <button
+          type="submit"
+          onclick="validateLogin(event)"
+          class="btn"
+          value="Submit"
+        >
+          Login
+        </button>
+        <!-- End submit button -->
+
+        <!-- Creating a container box to display error message -->
+        <div id="errorBox"></div>
+        <!-- Start-- create new account  -->
+        <div class="register-link">
+          <p>Don't have an account? <a href="SignUp.html">Register</a></p>
+        </div>
+        <!-- End--create new account -->
+      </form>
+    </div>
+
+    <!-- End form -->
+    <!-- footer -->
+    <footer>
+      <p>&copy; Harsharan Manpreet Aryan Vineeth</p>
+    </footer>
+
+    <!-- JS code for Menu -->
+    <script>
+      function toggleMenu() {
+        var menu = document.getElementById("menu");
+        menu.style.display = menu.style.display === "block" ? "none" : "block";
+      }
+
+      // Close the menu if the user clicks outside of it
+      window.onclick = function (event) {
+        if (!event.target.matches(".menu-button")) {
+          var menu = document.getElementById("menu");
+          if (menu.style.display === "block") {
+            menu.style.display = "none";
+          }
+        }
+      };
+    </script>
+  </body>
+</html>

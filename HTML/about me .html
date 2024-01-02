@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../CSS/style.css" />
+    <link rel="stylesheet" href="../CSS/Header-Footer.css" />
+    <title>About Us - True Colors Personality Test</title>
+    <style>
+      /* Adding some styles for the typewriter effect */
+      #typewriter {
+        overflow: hidden;
+        white-space: nowrap;
+        margin: 0 auto;
+        letter-spacing: 2px;
+        font-size: 1.2em;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- background Video -->
+    <video autoplay muted loop id="background-video">
+      <source src="../Images/VIDEO1.mp4" type="video/mp4" />
+      Your browser does not support the video tag.   
+    </video>
+    <!-- Header -->
+    <header>
+      <nav class="menu-container">
+        <div class="logo">
+          <img src="../Images/logo.jpg" height="35px" width="35px" alt="Logo" />
+          <!-- <a href="#">Logo</a> -->
+        </div>
+        <div class="menu">
+          <button class="menu-button" onclick="toggleMenu()">Menu</button>
+          <ul class="dropdown-menu" id="menu">
+            <a href="home.html">Home</a>
+            <a href="about me .html">About</a>
+            <a href="Contactus.html">Contact</a>
+            <a href="#" onclick="logout()">Logout</a>
+            <a href="Index.html">Login</a>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <section>
+      <article>
+        <div id="typewriter"></div>
+      </article>
+    </section>
+
+    <footer>
+      <p>
+        Developed by Aryan, Harsharan, Vineeth, and Manpreet - LaSalle College
+      </p>
+    </footer>
+
+    <script>
+      const textContainer = document.getElementById("typewriter");
+      const textToType = `
+                <h2>The Team</h2>
+                <p>We are a team of passionate individuals from LaSalle College, 
+                <br> working collaboratively on the Web Client Development project.</p> 
+                <p> Meet our dedicated members:</p>
+                <ul>
+                    <li><strong>Aryan</li>
+                    <li><strong>Harsharan</li>
+                    <li><strong>Vineeth</li>
+                    <li><strong>Manpreet</li>
+                </ul>
+                <h2>Our Contributions</h2>
+                <p>Each team member played a crucial role in the development of the website. please enjoy our website.</p>
+               `;
+      let index = 0;
+
+      function typeText() {
+        textContainer.innerHTML = textToType.slice(0, index);
+        index++;
+        if (index <= textToType.length) {
+          setTimeout(typeText, 50); // Adjust the typing speed (milliseconds)
+        }
+      }
+
+      // Start typing animation when the page is loaded
+      document.addEventListener("DOMContentLoaded", function () {
+        typeText();
+      });
+    </script>
+
+    <script>
+      function toggleMenu() {
+        var menu = document.getElementById("menu");
+        menu.style.display = menu.style.display === "block" ? "none" : "block";
+      }
+
+      // Close the menu if the user clicks outside of it
+      window.onclick = function (event) {
+        if (!event.target.matches(".menu-button")) {
+          var menu = document.getElementById("menu");
+          if (menu.style.display === "block") {
+            menu.style.display = "none";
+          }
+        }
+      };
+      //logout button event
+      function logout() {
+        // Clear session storage
+        sessionStorage.clear();
+
+        // Clear local storage
+        localStorage.clear();
+
+        // Redirect to the login page or perform other logout actions
+        window.location.href = "Index.html";
+        alert("Press OK to Logout!");
+      }
+    </script>
+  </body>
+</html>

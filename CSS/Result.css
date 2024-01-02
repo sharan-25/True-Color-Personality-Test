@@ -1,0 +1,94 @@
+
+body {
+    color: white;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    background-color: #f0f0f0;
+}
+
+.table-container {
+    margin: 100px;
+    max-width: 600px;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc; 
+    backdrop-filter: blur(100px);
+    border-radius: 8px;
+    text-align: center;
+}
+
+#centeredTable {
+    border-color: rgb(255, 255, 255);
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#centeredTable th, #centeredTable td {
+    border: 1px solid #ddd; 
+    padding: 10px;
+    text-align: center;
+}
+
+#centeredTable th {
+    background-color: #f2f2f2;
+    border: 1px solid #ddd; 
+}
+
+#checkPersonalityButton{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+#checkorange{
+    font-size: 16px;
+    background-color: orange;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px; 
+}
+
+#checkblue{
+    font-size: 16px;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px; 
+}
+#checkgreen{
+    font-size: 16px;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px; 
+}
+#checkgold{
+    font-size: 16px;
+    background-color: gold;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px; 
+}
+button:hover{
+    background-color: grey;
+}
+
+button {
+    padding: 10px 20px;
+    width: 100px;
+}

@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100wh;
+    /*background: url('../Images/landscape1.jpg') no-repeat;*/
+    background-size: cover;
+    background-position: center;
+  }
+
+  .question{
+    /* display : flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%; */
+
+    border : solid 1px rgba(255,255,255,.2);
+    border-radius: 10%;
+    padding: 2px;
+    color: rgb(255, 255, 255);
+    backdrop-filter: blur(30px);
+
+    display: flex;
+    /* position: relative; */
+    /* top: 50%; */
+    /* left: 50%; */
+    /* transform: translate(-50%, -50%); */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* height: 100vh; */
+    /* padding-top: -72px; */
+    
+    /*     
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+  }
+  /* .question form{
+    margin-top: -95px;
+    
+  } */
+  .questionnumber h1, h5, h3{
+    margin: 10px;
+  }
+  .radio_class{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .radio_class div input{
+    
+    margin: 10px;
+    padding: 10px;
+  }
+
+  .questionnumber{
+    text-align: center;
+  }
+  /* .questionnumber{
+    position: relative;
+    top: 40%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+  }
+
+  .theactualquestion{
+    position: relative;
+    top: 40%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+  } */
+
+  /* Style for the button */
+#submit {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px; 
+}
+
+/* Hover effect for the button */
+#submit:hover {
+  background-color: black;
+}
+
+#nextButtonContainer {
+  text-align: center;
+  
+  
+}

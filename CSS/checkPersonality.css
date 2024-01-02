@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: grey; 
+}
+
+#container {
+    position: relative;
+    text-align: center;
+    background-color: transparent;
+    border: 2px solid rgba(0, 0, 0, 0.1) ; 
+    backdrop-filter: blur(50px);
+
+    padding: 20px;
+    border-radius: 50px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+}
+
+h1 {
+    color: darkkhaki; 
+}
+
+h2 {
+    color: darkkhaki; 
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+    color:white;
+    font-style: inherit;
+}
+p{
+    color:white;
+    font-style: oblique;
+}

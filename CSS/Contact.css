@@ -1,0 +1,55 @@
+
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        background-color: #f4f4f4;
+        overflow: hidden; /* To hide the default scrollbar caused by the video */
+      }
+
+      video {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        z-index: -1000;
+        transform: translateX(-50%) translateY(-50%);
+      }
+
+      .contact-container {
+        position: relative;
+        z-index: 1; 
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      .contact {
+        margin-bottom: 20px;
+        padding: 15px;
+        border-radius: 4px;
+        background-color: transparent;
+        border: 2px solid rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 0 10px rgba(0, 0, 0 0.1);
+      }
+      .contact label{
+        color: wheat;
+      }
+
+      h2 {
+        color: #ffffff;
+      }
+
+      label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+
+      .email {
+        color: #ffffff;
+      }
+    

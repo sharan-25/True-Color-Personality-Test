@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- External CSS file -->
+    <link rel="stylesheet" href="../CSS/styleofquestions.css" />
+    <link rel="stylesheet" href="../CSS/Header-Footer.css" />
+    <!-- Adding javascript file -->
+    <script defer src="../JS/quiz.js"></script>
+
+    <style>
+      body {
+        background: url("../Images/Galaxy-7.jpg") no-repeat;
+        background-size: cover;
+        background-position: center;
+      }
+    </style>
+
+    <title>Quiz Page 7</title>
+  </head>
+  <body>
+    <!-- header -->
+    <header>
+      <nav class="menu-container">
+        <div class="logo">
+          <img src="../Images/logo.jpg" height="35px" width="35px" alt="Logo" />
+          <!-- <a href="#">Logo</a> -->
+        </div>
+        <div class="menu">
+          <button class="menu-button" onclick="toggleMenu()">Menu</button>
+          <ul class="dropdown-menu" id="menu">
+            <a href="home.html">Home</a>
+            <a href="about me .html">About</a>
+            <a href="Contactus.html">Contact</a>
+            <a href="#" onclick="logout()">Logout</a>
+       
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <!-- Question -->
+    <div class="question">
+      <form action="">
+        <div class="questionnumber"><h1>QUESTION 7</h1></div>
+
+        <div class="theactualquestion">
+          <h3>My basic approach to life is:</h3>
+        </div>
+        <div class="theoptions">
+          <h5>A. To take one day at a time and have fun.</h5>
+          <div class="radio_class">
+            <div><input type="radio" name="groupA" value="1" />1</div>
+            <div><input type="radio" name="groupA" value="2" />2</div>
+            <div><input type="radio" name="groupA" value="3" />3</div>
+            <div><input type="radio" name="groupA" value="4" />4</div>
+          </div>
+
+          <h5>B. To figure out what life is all about.</h5>
+          <div class="radio_class">
+            <div><input type="radio" name="groupb" value="1" />1</div>
+            <div><input type="radio" name="groupb" value="2" />2</div>
+            <div><input type="radio" name="groupb" value="3" />3</div>
+            <div><input type="radio" name="groupb" value="4" />4</div>
+          </div>
+
+          <h5>C. To help others and be happy and succeed.</h5>
+          <div class="radio_class">
+            <div><input type="radio" name="groupc" value="1" />1</div>
+            <div><input type="radio" name="groupc" value="2" />2</div>
+            <div><input type="radio" name="groupc" value="3" />3</div>
+            <div><input type="radio" name="groupc" value="4" />4</div>
+          </div>
+
+          <h5>D. To plan for the future and make it as good as possible.</h5>
+          <div class="radio_class">
+            <div><input type="radio" name="groupd" value="1" />1</div>
+            <div><input type="radio" name="groupd" value="2" />2</div>
+            <div><input type="radio" name="groupd" value="3" />3</div>
+            <div><input type="radio" name="groupd" value="4" />4</div>
+          </div>
+        </div>
+        <!-- Submit button -->
+        <button id="submit" onclick="submitQuiz(event)">Next</button>
+      </form>
+    </div>
+    <!-- footer -->
+    <footer>
+      <p>&copy; Harsharan Manpreet Aryan Vineeth</p>
+    </footer>
+    <!-- Js code for menu -->
+    <script>
+      function toggleMenu() {
+        var menu = document.getElementById("menu");
+        menu.style.display = menu.style.display === "block" ? "none" : "block";
+      }
+
+      // Close the menu if the user clicks outside of it
+      window.onclick = function (event) {
+        if (!event.target.matches(".menu-button")) {
+          var menu = document.getElementById("menu");
+          if (menu.style.display === "block") {
+            menu.style.display = "none";
+          }
+        }
+      };
+      //logout button event
+      function logout() {
+        // Clear session storage
+        sessionStorage.clear();
+
+        // Clear local storage
+        localStorage.clear();
+
+        // Redirect to the login page or perform other logout actions
+        window.location.href = "Index.html";
+        alert("Press OK to Logout!");
+      }
+    </script>
+  </body>
+</html>
