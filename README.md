@@ -1,10 +1,5 @@
 # True-Color-Personality-Test
 The ‘True Color Personality Test’ Web Application helps the user to explore his personality type based on personality-color test. It helps the user to get along better with other people, increase productivity, and realize their full potential.
-Developers:
-Aryan Handa 
-Harsharn Kaur
-Manpreet Kaur
-Vineeth Dumpa
 
 Overview:
 This web application implements "The True Colors Personality Test" using HTML, CSS, JavaScript, and jQuery. It features a login system, a questionnaire form, and result display based on user inputs.
